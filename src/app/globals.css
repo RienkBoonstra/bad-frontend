@@ -44,3 +44,19 @@ main {
   background-color: blanchedalmond;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column; /* Passe à une disposition verticale */
+  }
+
+  header {
+    width: 100%; /* Le header occupe toute la largeur */
+    height: auto; /* La hauteur s'ajuste à son contenu */
+  }
+
+  main {
+    margin-left: 0; /* Retirer l'espace entre le header et le main */
+    width: 100%; /* Le main occupe toute la largeur */
+  }
+}
