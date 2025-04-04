@@ -19,8 +19,28 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+header {
+  width: 280px;
+  height: 100%;
+  background-color: lightblue;
+}
+
+main {
+  flex: 1;
+  background-color: blanchedalmond;
+  height: 100%;
 }
