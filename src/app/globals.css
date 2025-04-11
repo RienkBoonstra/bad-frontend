@@ -31,18 +31,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 280px;
-  height: 100%;
-  background-color: lightblue;
+  height: 100vh;
+  overflow-y: auto;
+  color: white;
+  background-color: black;
+  padding: 30px 45px;
+  box-sizing: border-box;
 }
 
 main {
   flex: 1;
-  background-color: blanchedalmond;
   height: 100%;
+  overflow-y: auto; /* Enables vertical scrolling when content overflows */
+  margin-left: 280px; /* This ensures the content is pushed to the right, avoiding the fixed sidebar */
 }
 
 @media (max-width: 768px) {
@@ -59,4 +68,62 @@ main {
     margin-left: 0; /* Retirer l'espace entre le header et le main */
     width: 100%; /* Le main occupe toute la largeur */
   }
+}
+.contact-info-container {
+  display: flex;
+  width: 100%;
+}
+
+.contact-info-left-side, .contact-info-right-side {
+  width: 50%;
+}
+
+.contact-info-left-side {
+  background-color: #232323;
+  color: white;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.contact-info-right-side {
+  background-color: white;
+  color: black;
+  padding: 75px 50px 50px;
+  box-sizing: border-box;
+}
+
+#kerklaan-zunderdorp-street {
+  display: block;
+}
+
+h5 {
+  font-size: 0.9rem;
+  color: #f6be00;
+  font-family: Roboto, sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h5, h2 {
+  margin-bottom: 20px;
+}
+
+#company-logo {
+  margin-bottom: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+ul.menu li {
+  padding-bottom: 20px;
+}
+
+ul.menu li:hover {
+  color: #f6be00;
+}
+#homepage-image {
+  display: block;
 }
