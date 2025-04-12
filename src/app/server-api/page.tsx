@@ -8,7 +8,7 @@ interface ApiResponse {
     message: string;
 }
 
-export default function HomePage() {
+export default function About() {
     const [message, setMessage] = useState<string>('');
 
     useEffect(() => {
