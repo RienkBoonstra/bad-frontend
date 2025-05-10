@@ -29,7 +29,7 @@ export default function RootLayout({
         <header>
             <ol id="company-logo">
                 <li>
-                    boonstr
+                    boonstra
                 </li>
                 <li>
                     application
