@@ -127,3 +127,14 @@ ul.menu li:hover {
 #homepage-image {
   display: block;
 }
+
+#opdrachtgevers-sectie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#opdrachtgevers-sectie>div{
+  background-color: cornflowerblue;
+  flex: 1 1 250px;
+  max-height: 400px;
+}
