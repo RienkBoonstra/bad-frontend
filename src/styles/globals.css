@@ -1,0 +1,22 @@
+/* Import TailwindCSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add global styles */
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Replace with your desired font */
+    background-color: #f9fafb; /* Example background color */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box; /* Ensure consistent box model behavior */
+}
