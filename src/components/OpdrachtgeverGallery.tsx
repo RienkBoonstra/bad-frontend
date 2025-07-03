@@ -6,12 +6,18 @@ import { Opdrachtgever } from './opdrachtgever';
 
 const opdrachtgevers: Opdrachtgever[] = [];
 
+// This controls modal visibility
+const hidePopup = () => setIsModalOpen(false);
+
 const OpdrachtgeverGallery = () => {
     const opdrachtgevers = [
-        { image: "/clients/cjib.png", name: "CJIB", description: "CJIB plays a vital role in managing public order.", period: "2024-2025" },
-        { image: "/clients/dpg-media.png", name: "DPG Media", description: "A leading media group serving quality" +
-                " news" +
-                " and information.", period: "2018-2023"},
+        { image: "/clients/cjib.png", name: "CJIB", description: "Ontwikkeld en geoptimaliseerd Java-gebaseerde" +
+                " back-end services voor het geautomatiseerde incassosysteem van het CJIB. Werkzaamheden omvatten" +
+                " het refactoren van legacy-code, het vervangen van Eclipse Link door Hibernate van de en JPA, en het " +
+                "implementeren van RESTful API’s voor koppelingen met interne en externe systemen. Binnen een Agile-team " +
+                "samengewerkt aan schaalbare en betrouwbare oplossingen ter ondersteuning van ketenpartners en processen" +
+                " binnen het domein van verkeers- en strafrecht.", period: "2024-2025" },
+        { image: "/clients/dpg-media.png", name: "DPG Media", description: "A leading media group serving quality and information.", period: "2018-2023"},
         { image: "/clients/ing.png", name: "ING", description: "A trusted global leader in banking services.", period: "2014-2018" },
         { image: "/clients/nn.png", name: "NN Group", description: "An international financial services provider.", period: "2020-2021" },
     ];
@@ -47,11 +53,11 @@ const OpdrachtgeverGallery = () => {
                             />
 
                             {/* Period Overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 text-white text-sm bg-black bg-opacity-50 px-2 py-1 text-center">
+                            <div
+                                className="absolute bottom-0 left-0 right-0 text-white text-sm bg-black bg-opacity-50 px-2 py-1 text-center">
                                 {opdrachtgever.period}
                             </div>
                         </div>
-
                     </div>
                 ))}
             </div>
@@ -70,13 +76,13 @@ const OpdrachtgeverGallery = () => {
 
                     {/* Popup Content */}
                     <div
-                        className="relative text-white bg-gray-500 shadow-lg p-6 w-full max-w-lg mx-4 md:mx-0"
+                        className="relative text-white bg-customer-details-popup shadow-lg p-6 w-full max-w-4xl mx-4 md:mx-0"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
                             onClick={hidePopup}
-                            className="absolute top-4 right-4 bg-gray-200 text-gray-600 hover:bg-gray-300 focus:ring-2 focus:ring-gray-500 focus:outline-none p-2 shadow-md"
+                            className="absolute top-4 right-4 text-white hover:bg-gray-300 focus:ring-2 focus:ring-gray-500 focus:outline-none p-2 shadow-md"
                             aria-label="Close popup"
                         >
                             <svg
@@ -109,34 +115,29 @@ const OpdrachtgeverGallery = () => {
                             <h2 className="text-2xl font-semibold mb-2">
                                 {opdrachtgevers[selectedImageIndex].name}
                             </h2>
-                            <p className="text-gray-600">
+                            <p className="text-gray-300">
                                 {opdrachtgevers[selectedImageIndex].period}
                             </p>
-                            <p className="text-gray-600">{opdrachtgevers[selectedImageIndex].description}</p>
+
                             <h3 className={`text-xl font-semibold mt-4 mb-2`}>
                                 Opdracht omschrijving
                             </h3>
+                            <p className="text-gray-300">{opdrachtgevers[selectedImageIndex].description}</p>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
                             </p>
                             <h3 className={`text-xl font-semibold mt-4 mb-2`}>
                                 Toegepaste technieken
                             </h3>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
+                            <ul>
+                                <li>Java 17</li>
+                                <li>Spring Boot 3.x.x</li>
+                                <li>Postgress x.x.x</li>
+                                <li>Kubernetes</li>
+                                <li>Cucumber x.x.x</li>
+                                <li>[...]</li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>

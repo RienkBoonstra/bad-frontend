@@ -138,3 +138,14 @@ ul.menu li:hover {
   flex: 1 1 250px;
   max-height: 400px;
 }
+
+.bg-customer-details-popup {
+  background-color: #232323;
+  color: white;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.kunden-galerie {
+  padding: 10%;
+}
