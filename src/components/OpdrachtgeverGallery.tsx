@@ -101,7 +101,7 @@ const OpdrachtgeverGallery = () => {
 
                         {/* Logo */}
                         <div className="flex justify-center mb-6">
-                            <Image
+                            <img
                                 src={opdrachtgevers[selectedImageIndex].image}
                                 alt={opdrachtgevers[selectedImageIndex].name}
                                 width={250}
