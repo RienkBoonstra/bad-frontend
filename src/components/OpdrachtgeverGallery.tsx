@@ -6,8 +6,7 @@ import { Opdrachtgever } from './opdrachtgever';
 
 const opdrachtgevers: Opdrachtgever[] = [];
 
-// This controls modal visibility
-const hidePopup = () => setIsModalOpen(false);
+
 
 const OpdrachtgeverGallery = () => {
     const opdrachtgevers = [
@@ -22,15 +21,17 @@ const OpdrachtgeverGallery = () => {
         { image: "/clients/nn.png", name: "NN Group", description: "An international financial services provider.", period: "2020-2021" },
     ];
 
+    // This controls modal visibility
+    const hidePopup = () => {
+        setSelectedImageIndex(null);
+    };
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
     const showPopup = (index: number) => {
         setSelectedImageIndex(index);
     };
 
-    const hidePopup = () => {
-        setSelectedImageIndex(null);
-    };
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -127,7 +128,7 @@ const OpdrachtgeverGallery = () => {
 
                             </p>
                             <h3 className={`text-xl font-semibold mt-4 mb-2`}>
-                                Toegepaste technieken
+                                {/*Toegepaste technieken*/}
                             </h3>
                             <ul>
                                 <li>Java 17</li>
