@@ -2,23 +2,27 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Opdrachtgever } from './opdrachtgever';
-
-const opdrachtgevers: Opdrachtgever[] = [];
-
-
 
 const OpdrachtgeverGallery = () => {
     const opdrachtgevers = [
+        { image: "/clients/ing.png", name: "ING", description: "A trusted global leader in banking services.",
+            period: "2014-2018",
+            technologies: ["Java", "Spring Boot", "Hibernate", "JPA", "RESTful API", "Agile"]},
+        { image: "/clients/dpg-media.png", name: "DPG Media", description: "A leading media group serving quality" +
+                " and information.",
+            period: "2018-2023",
+            technologies: ["Java", "Spring Boot", "Hibernate", "JPA", "RESTful API", "Agile"]},
         { image: "/clients/cjib.png", name: "CJIB", description: "Ontwikkeld en geoptimaliseerd Java-gebaseerde" +
                 " back-end services voor het geautomatiseerde incassosysteem van het CJIB. Werkzaamheden omvatten" +
                 " het refactoren van legacy-code, het vervangen van Eclipse Link door Hibernate van de en JPA, en het " +
                 "implementeren van RESTful API’s voor koppelingen met interne en externe systemen. Binnen een Agile-team " +
                 "samengewerkt aan schaalbare en betrouwbare oplossingen ter ondersteuning van ketenpartners en processen" +
-                " binnen het domein van verkeers- en strafrecht.", period: "2024-2025" },
-        { image: "/clients/dpg-media.png", name: "DPG Media", description: "A leading media group serving quality and information.", period: "2018-2023"},
-        { image: "/clients/ing.png", name: "ING", description: "A trusted global leader in banking services.", period: "2014-2018" },
-        { image: "/clients/nn.png", name: "NN Group", description: "An international financial services provider.", period: "2020-2021" },
+                " binnen het domein van verkeers- en strafrecht.",
+            period: "2024-2025",
+            technologies: ["Java 17", "Spring Boot", "Hibernate", "JPA", "RESTful API", "Agile"]},
+        { image: "/clients/nn.png", name: "NN Group", description: "An international financial services provider.",
+            period: "2025-present",
+            technologies: ["Java", "Spring Boot", "Hibernate", "JPA", "RESTful API", "Agile"]}
     ];
 
     // This controls modal visibility
@@ -111,8 +115,8 @@ const OpdrachtgeverGallery = () => {
                             />
                         </div>
 
-                        {/* Text Content */}
-                        <div className="text-center">
+                        {/* Text Content*/}
+                        <div>
                             <h2 className="text-2xl font-semibold mb-2">
                                 {opdrachtgevers[selectedImageIndex].name}
                             </h2>
@@ -128,15 +132,12 @@ const OpdrachtgeverGallery = () => {
 
                             </p>
                             <h3 className={`text-xl font-semibold mt-4 mb-2`}>
-                                {/*Toegepaste technieken*/}
+                                Toegepaste technieken
                             </h3>
                             <ul>
-                                <li>Java 17</li>
-                                <li>Spring Boot 3.x.x</li>
-                                <li>Postgress x.x.x</li>
-                                <li>Kubernetes</li>
-                                <li>Cucumber x.x.x</li>
-                                <li>[...]</li>
+                                {opdrachtgevers[selectedImageIndex]?.technologies?.map((technology , index) => (
+                                    <li key={index}>{technology}</li>
+                                ))}
                             </ul>
 
                         </div>
