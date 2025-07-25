@@ -149,3 +149,8 @@ ul.menu li:hover {
 .kunden-galerie {
   padding: 10%;
 }
+
+#menu-list a {
+  list-style: none;
+  line-height: 50px;
+}
