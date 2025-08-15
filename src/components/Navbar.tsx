@@ -9,9 +9,8 @@ import { usePathname } from "next/navigation";
 const navItems = [
     { href: '/', label: 'Home' },
     { href: '/rienk-boonstra', label: 'Rienk Boonstra' },
-    { href: '/java-kotlin-development', label: 'Java/Kotlin' },
-    { href: '/react-nextjs-development', label: 'React/Nextjs' },
-    { href: '/artificial-intelligence', label: 'Artificial Intelligence' },
+    { href: '/backend-development', label: 'Backend Development' },
+    { href: '/frontend-development', label: 'Frontend Development' },
     { href: '/opdrachtgevers', label: 'Opdrachtgevers' },
     { href: '/contact', label: 'Contact' },
 ];
